@@ -1,0 +1,103 @@
+.activity-timeline {
+    margin: 2px 8px 1px 3rem;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    box-shadow: 1px 4px 10px 2px #dededea9;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -34px;
+        width: 14px;
+        height: 14px;
+        background: white;
+        border: 3px solid #0974F2 ;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25px;
+        width: 1px;
+        height: 100%;
+        background: #b3d4fb;
+    }
+
+    .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+
+        .timeline-heading {
+            font-size: 13px;
+            font-weight: 400;
+            color: #4b465b;
+        }
+
+        .timeline-stats {
+            display: flex;
+            gap: 10px;
+
+            .time {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                font-size: 12px;
+                font-weight: 400;
+                color: #353142;
+                border-right: 1px solid #ccc;
+                padding-right: 10px;
+
+                &:last-child {
+                    padding-right: 0;
+                    border-right: none;
+                }
+
+                .lebel {
+                    font-size: 11px;
+                    display: flex;
+                    align-items: center;
+                    gap: 3px;
+                    color: #4b465b;
+                    svg {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    .activity-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 764px) {
+    .timeline-header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 535px) {
+    .timeline-header {
+        .timeline-stats {
+            flex-direction: column;
+            gap: 0 !important;
+            .time {
+                border-right: none !important;
+            }
+        }
+    }
+}
+
+

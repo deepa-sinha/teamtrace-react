@@ -1,0 +1,42 @@
+.task-lists {
+    height: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    .task-table {
+        width: 100%;
+        border: 1px solid var(--border-color, #e5e7eb);
+        border-radius: 6px;
+        border-collapse: collapse;
+
+        thead th {
+            text-align: left;
+            font-size: 12px;
+            font-weight: 500;
+            color: #70698a;
+            padding: 5px 0 5px 10px;
+        }
+
+        td {
+            font-size: 13px;
+            border-bottom: 1px solid var(--border-color, #e5e7eb);
+            padding: 5px 0 5px 10px;
+        }
+
+        .col-link {
+            color: #2779f3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .people-stack {
+            .avatar {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
