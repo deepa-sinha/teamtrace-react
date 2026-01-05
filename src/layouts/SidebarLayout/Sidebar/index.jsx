@@ -129,8 +129,11 @@ export default function Sidebar() {
                         }}
                     >
                         <ul className="popover-menu">
-                            <li>Edit</li>
-                            <li>Delete</li>
+                            <li>My Profile</li>
+                            <li>Change Password</li>
+                            <li>User Activities</li>
+                            <li>Download Apps</li>
+                            <li>logout</li>
                         </ul>
                     </Popover>
                 </div>

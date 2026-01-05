@@ -9,7 +9,7 @@ export default function TaskColumn(props) {
     return (
         <div className="task-column">
             <div className="task-col-header">
-                <h3>{props.title}</h3>
+                <h3 className="task-col-heading">{props.title}</h3>
                 <div className="task-count">{props.tasks.length}</div>
             </div>
 

@@ -16,6 +16,8 @@ import TaskBarChart from "../../components/charts/TaskBarChart";
 import Empty from "../../components/Empty";
 import { useState } from "react";
 import Board from "./Board";
+import Lists from "./Lists";
+import Calendar from "./Calendar";
 import "./style.scss";
 
 export default function Home() {
@@ -219,6 +221,10 @@ export default function Home() {
       )}
 
       {activeTab === "board" && <Board />}
+
+      {activeTab === "list" && <Lists />}
+
+      {activeTab === "calendar" && <Calendar />}
 
       
     </section>
