@@ -8,6 +8,11 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
+import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NavLinkMenu from "./NavLinkMenu";
 import Popover from "../../../components/Popover";
 import { Link } from "react-router-dom";
@@ -129,11 +134,11 @@ export default function Sidebar() {
                         }}
                     >
                         <ul className="popover-menu">
-                            <li>My Profile</li>
-                            <li>Change Password</li>
-                            <li>User Activities</li>
-                            <li>Download Apps</li>
-                            <li>logout</li>
+                            <li><AccountCircleOutlinedIcon/> My Profile</li>
+                            <li><HttpsOutlinedIcon/> Change Password</li>
+                            <li><AccountBoxOutlinedIcon/> User Activities</li>
+                            <li><FileDownloadOutlinedIcon/> Download Apps</li>
+                            <li><LogoutRoundedIcon/> logout</li>
                         </ul>
                     </Popover>
                 </div>

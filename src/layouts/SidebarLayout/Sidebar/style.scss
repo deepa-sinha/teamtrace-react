@@ -70,7 +70,7 @@
 
         .sidebar-footer-actions {
             .sideber-collapse {
-                top: 75%;
+                top: calc(100% - 50px);
                 right: -33px;
                 rotate: 180deg;
             }
@@ -81,6 +81,30 @@
             .user-text {
                 display: none;
             }
+        }
+    }
+}
+
+.MuiPaper-root {
+    box-shadow: 1px 1px 20px 2px #b5b5b5a9 !important;
+    opacity: 1;
+    top: 520px !important;
+    left: 223px !important;
+}
+
+.popover-menu {
+    padding: .5em 1.5em;
+    color: #475467;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 7px;
+        font-size: 13px;
+
+        svg {
+            width: 13px;
         }
     }
 }
@@ -257,7 +281,6 @@
                     display: block;
                 }
             }
-
         }
 
         .sidebar-footer {

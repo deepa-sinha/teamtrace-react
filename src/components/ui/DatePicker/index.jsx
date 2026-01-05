@@ -4,7 +4,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TextField, InputAdornment } from "@mui/material";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import "./style.scss";
 
 export default function BsicDatePicker() {
@@ -19,13 +18,6 @@ export default function BsicDatePicker() {
           textField: {
             fullWidth: true,
             className: "date-picker",
-            InputProps: {
-              endAdornment: (
-                <InputAdornment position="end">
-                  <CalendarMonthIcon />
-                </InputAdornment>
-              ),
-            },
           },
         }}
       />
