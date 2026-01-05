@@ -15,7 +15,7 @@ import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import NavLinkMenu from "./NavLinkMenu";
 import Popover from "../../../components/Popover";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { isMedia, onMediaQuery } from "../../../utils";
 import { useEffect } from "react";
 import "./style.scss";
@@ -28,6 +28,7 @@ export default function Sidebar() {
             document.body.classList.toggle("sidebar-open");
         }
     };
+    const navigate = useNavigate();
 
     useEffect(() => {
         const cleanup = onMediaQuery("(max-width: 768px)", () => {
@@ -138,7 +139,7 @@ export default function Sidebar() {
                             <li><HttpsOutlinedIcon/> Change Password</li>
                             <li><AccountBoxOutlinedIcon/> User Activities</li>
                             <li><FileDownloadOutlinedIcon/> Download Apps</li>
-                            <li><LogoutRoundedIcon/> logout</li>
+                            <li onClick={() => navigate("/login")}><LogoutRoundedIcon/> logout</li>
                         </ul>
                     </Popover>
                 </div>
