@@ -40,3 +40,20 @@
         border-radius: 60px 0 0 60px;
     }
 }
+
+
+@media (max-width: 1200px) {
+    .auth-layout {
+        background-size: cover;
+        .auth-left {
+            display: none;
+        }
+
+        .auth-right {
+            margin: auto;
+            width: 90%;
+            border-radius: 60px;
+        }
+    }
+    
+}

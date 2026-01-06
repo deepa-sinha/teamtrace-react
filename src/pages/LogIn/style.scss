@@ -209,3 +209,35 @@
         }
     }
 }
+
+
+@media (max-width: 530px) {
+    .login-card {
+        padding: 30px 0px;
+    }
+
+    .brand {
+        width: 80%;
+    }
+
+    .oauth-buttons {
+        transform: scale(.8);
+    }
+
+    .signin-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .signin-title {
+        font-size: 25px;
+    }
+
+    .login-footer {
+        flex-direction: column;
+    }
+
+    .register-text {
+        text-align: center;
+    }
+}
