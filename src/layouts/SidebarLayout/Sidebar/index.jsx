@@ -8,11 +8,11 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
-import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import HttpsOutlinedIcon from "@mui/icons-material/HttpsOutlined";
+import AccountBoxOutlinedIcon from "@mui/icons-material/AccountBoxOutlined";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import NavLinkMenu from "./NavLinkMenu";
 import Popover from "../../../components/Popover";
 import { Link, useNavigate } from "react-router-dom";
@@ -36,6 +36,20 @@ export default function Sidebar() {
         });
 
         return cleanup;
+    }, []);
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (isMedia("(max-width: 768px)") && document.body.classList.contains("sidebar-open")) {
+                const sidebar = document.querySelector(".sidebar");
+                if (sidebar && !sidebar.contains(event.target)) {
+                    document.body.classList.remove("sidebar-open");
+                }
+            }
+        };
+
+        document.addEventListener("click", handleOutsideClick);
+        return () => document.removeEventListener("click", handleOutsideClick);
     }, []);
 
     return (
@@ -135,11 +149,21 @@ export default function Sidebar() {
                         }}
                     >
                         <ul className="popover-menu">
-                            <li><AccountCircleOutlinedIcon/> My Profile</li>
-                            <li><HttpsOutlinedIcon/> Change Password</li>
-                            <li><AccountBoxOutlinedIcon/> User Activities</li>
-                            <li><FileDownloadOutlinedIcon/> Download Apps</li>
-                            <li onClick={() => navigate("/login")}><LogoutRoundedIcon/> logout</li>
+                            <li>
+                                <AccountCircleOutlinedIcon /> My Profile
+                            </li>
+                            <li>
+                                <HttpsOutlinedIcon /> Change Password
+                            </li>
+                            <li>
+                                <AccountBoxOutlinedIcon /> User Activities
+                            </li>
+                            <li>
+                                <FileDownloadOutlinedIcon /> Download Apps
+                            </li>
+                            <li onClick={() => navigate("/login")}>
+                                <LogoutRoundedIcon /> logout
+                            </li>
                         </ul>
                     </Popover>
                 </div>

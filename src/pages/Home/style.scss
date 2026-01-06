@@ -157,6 +157,7 @@
         border: 1px solid var(--border-color, #e5e7eb);
         border-radius: 6px;
         padding: 10px;
+        padding-bottom: 20px;
 
         .card-header {
             display: flex;
@@ -219,6 +220,7 @@
 
 @media (max-width: 991px) {
     .heading-stats {
+        width: calc(100% - 10px);
         overflow-x: auto;
         padding-bottom: 10px;
 

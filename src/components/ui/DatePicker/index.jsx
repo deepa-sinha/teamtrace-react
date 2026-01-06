@@ -14,6 +14,7 @@ export default function BsicDatePicker() {
       <DatePicker
         value={value}
         onChange={(newValue) => setValue(newValue)}
+        desktopModeMediaQuery="@media (min-width: 600px)"
         slotProps={{
           textField: {
             fullWidth: true,
